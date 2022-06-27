@@ -1,6 +1,40 @@
-html, body {
-  height: 100%;
-  width: 100%;
+body {
+  background-color: black;
+}
+
+.display {
+  width: 600px; 
+  height: 480px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.bg {
+  width: 600px;
+  height: 480px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.title-option {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 45px;
+  box-shadow: 5px 10px 18px black;
+  background-color: #ffa49cFF;
+  font-family: monospace;
+}
+
+.title-option:hover {
+  cursor: pointer;
+}
+
+.intro-slide {
+  top: 200px;
+  display: none;
+  color: white;
+  font-family: monospace;
+  position: absolute;
 }
 
 #display {
@@ -13,4 +47,14 @@ html, body {
   height: 480px; 
   background-color: black;
   position: absolute; 
+  border-radius: 5px;
+}
+
+#title-menu {
+  top: 150px;
+  position: absolute;
+}
+
+#intro {
+  display: none;
 }
