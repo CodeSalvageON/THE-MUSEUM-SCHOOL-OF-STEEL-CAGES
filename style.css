@@ -53,17 +53,21 @@ body {
 }
 
 .ui {
+  width: 100px;
   padding: 10px;
   border-radius: 5px; 
   background-color: #898cd7FF;
   opacity: 0.6;
-  display: none;
   z-index: 100;
   font-family: monospace;
 }
 
 .ui:hover {
   cursor: pointer;
+}
+
+.mapItem {
+  display: none;
 }
 
 #display {
@@ -84,17 +88,47 @@ body {
   position: absolute;
 }
 
-#intro, #night1 {
+#intro, #night1, #objDisplay, #invDisplay, #mapDisplay {
   display: none;
 }
 
-#mainBtns {
+#objDisplay, #invDisplay, #mapDisplay {
+  z-index: 300;
+}
+
+#mapBtn {
   bottom: 10px; 
   left: 10px;
-  position: absolute;
+}
+
+#objBtn {
+  bottom: 80px; 
+  left: 10px;
+}
+
+#invBtn {
+  bottom: 45px;
+  left: 10px;
+}
+
+#levBtn {
+  bottom: 10px; 
+  right: 10px;
 }
 
 #objMark {
   top: 10px; 
   left: 10px;
+}
+
+#objList, #invList, #mapList {
+  width: 500px; 
+  height: 300px;
+  overflow-y: auto;
+  font-family: monospace;
+  color: white; 
+  font-size: 20px;
+  border-radius: 8px;
+  top: 100px; 
+  position: absolute;
 }

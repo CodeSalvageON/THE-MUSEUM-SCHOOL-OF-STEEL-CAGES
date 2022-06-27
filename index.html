@@ -8,19 +8,55 @@
   </head>
   <body>
     <section id="display">
-      <section id="mainBtns">
-        <section id="mapBtn" class="ui">
-          [ MAP ]
-        </section>
-        <section id="objBtn" class="ui">
-          [ OBJECTIVES ]
-        </section>
-        <section id="invBtn" class="ui">
-          [ INV ]
-        </section>
-      </section>
       <section id="objMark" class="gui">
         [ Follow the noise outside. ]
+      </section>
+      <section id="mapBtn" class="gui">
+        [ MAP ]
+      </section>
+      <section id="objBtn" class="gui">
+        [ OBJECTIVES ]
+      </section>
+      <section id="invBtn" class="gui">
+        [ INV ]
+      </section>
+      <section id="levBtn" class="gui">
+        [ GUIDE ]
+      </section>
+      <section id="objDisplay" class="display crt">
+        <img src="burst.jpg" class="bg"/>
+        <section class="ui" id="backObj">
+          [ RETURN ]
+        </section>
+        
+        <section id="objList"></section>
+      </section>
+      <section id="invDisplay" class="display crt">
+        <img src="burst.jpg" class="bg"/>
+        <section class="ui" id="backInv">
+          [ RETURN ]
+        </section>
+        
+        <section id="invList"></section>
+      </section>
+      <section id="mapDisplay" class="display crt">
+        <img src="burst.jpg" class="bg"/>
+        <section class="ui" id="backMap">
+          [ RETURN ]
+        </section>
+        <section class="ui" id="youAreAt">You are at the Fortress Room.</section>
+        
+        <section id="mapList">
+          <section class="ui mapItem" id="map3">
+            [ Gym Hallway ]
+          </section>
+          <section class="ui mapItem" id="map2">
+            [ Fortress Exterior ]
+          </section>
+          <section class="ui mapItem" id="map1">
+            [ Fortress Room ]
+          </section>
+        </section>
       </section>
       <section id="title" class="display crt">
         <img src="cover.jpeg" class="bg"/>
@@ -80,6 +116,7 @@
 
     <audio src="thunder.mp3" id="thunder"></audio>
     <audio src="elec.mp3" id="elec"></audio>
+    <audio src="beep.mp3" id="beep"></audio>
 
     <audio src="track1.mp3" id="track1"></audio>
 

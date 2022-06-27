@@ -28,6 +28,13 @@ let hasTouched = false;
 
 const display = document.getElementById("display");
 
+const objBtn = document.getElementById("objBtn");
+const backObj = document.getElementById("backObj");
+const invBtn = document.getElementById("invBtn");
+const backInv = document.getElementById("backInv");
+const mapBtn = document.getElementById("mapBtn");
+const backMap = document.getElementById("backMap");
+
 function checkTouch () {
   if (hasTouched === false) {
     playSound("thunder", 0);
@@ -59,6 +66,48 @@ newBtn.onclick = function () {
   else {
     return false;
   }
+}
+
+objBtn.onclick = function () {
+  playSound("beep", 0); 
+
+  $("#objDisplay").show();
+  $(formerShow).hide();
+}
+
+backObj.onclick = function () {
+  playSound("beep", 1); 
+
+  $("#objDisplay").hide();
+  $(formerShow).show();
+}
+
+invBtn.onclick = function () {
+  playSound("beep", 0); 
+
+  $("#invDisplay").show();
+  $(formerShow).hide();
+}
+
+backInv.onclick = function () {
+  playSound("beep", 1); 
+
+  $("#invDisplay").hide();
+  $(formerShow).show();
+}
+
+mapBtn.onclick = function () {
+  playSound("beep", 0); 
+
+  $("#mapDisplay").show();
+  $(formerShow).hide();
+}
+
+backMap.onclick = function () {
+  playSound("beep", 1); 
+
+  $("#mapDisplay").hide();
+  $(formerShow).show();
 }
 
 // Animations 
@@ -149,7 +198,37 @@ function theNoise () {
 
       setTimeout(function () {
         $(".gui").show();
+        $("#mainBtns").show();
+        formerShow = "#night1";
+        addObjective("Follow the noise outside.");
+        $("#map1").show();
+        $("#map2").show();
+        $("#map3").show();
       }, 1000);
     }, 50);
   }, 3000);
 }
+
+// Game variables. 
+
+let formerShow = "";
+let currentLoc = 0;
+let objMark = document.getElementById("objMark");
+let youAreAt = document.getElementById("youAreAt");
+
+// Game functions
+
+function addObjective (objective) {
+  objMark.innerText = "[ " + objective + " ]";
+  objList.innerHTML = "<b>[ " + objective + " ]</b><br/>" + objList.innerHTML;
+}
+
+function checkYouAreAt () {
+  switch (currentLoc) {
+    case 0: 
+      youAreAt.innerText = "You are at the Fortress Room.";
+      break;
+  }
+}
+
+setInterval(checkYouAreAt, 1000);
