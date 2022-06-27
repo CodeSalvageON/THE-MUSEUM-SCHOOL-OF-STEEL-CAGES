@@ -94,20 +94,25 @@ function startIntro () {
                 $("#islide7").show();
 
                 setTimeout(function () {
-                  $("#islide8").hide();
-                  $("#islide9").show();
+                  $("#islide7").hide();
+                  $("#islide8").show();
 
                   setTimeout(function () {
-                    $("#islide9").hide();
-                    $("#islide10").show();
+                    $("#islide8").hide();
+                    $("#islide9").show();
 
                     setTimeout(function () {
-                      $("#islide10").hide();
-                      $("#islide11").show();
+                      $("#islide9").hide();
+                      $("#islide10").show();
 
                       setTimeout(function () {
-                        $("#islide11").hide();
-                        $("#islide12").show();
+                        $("#islide10").hide();
+                        $("#islide11").show();
+
+                        setTimeout(function () {
+                          $("#islide11").hide();
+                          $("#islide12").show();
+                        }, 3000);
                       }, 3000);
                     }, 3000);
                   }, 3000); 
