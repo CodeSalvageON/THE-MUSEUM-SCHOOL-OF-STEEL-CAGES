@@ -37,6 +37,35 @@ body {
   position: absolute;
 }
 
+.gui {
+  padding: 10px;
+  border-radius: 5px; 
+  background-color: #898cd7FF;
+  opacity: 0.6;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  font-family: monospace;
+}
+
+.gui:hover {
+  cursor: pointer;
+}
+
+.ui {
+  padding: 10px;
+  border-radius: 5px; 
+  background-color: #898cd7FF;
+  opacity: 0.6;
+  display: none;
+  z-index: 100;
+  font-family: monospace;
+}
+
+.ui:hover {
+  cursor: pointer;
+}
+
 #display {
   top: 0px; 
   left: 0px; 
@@ -55,6 +84,17 @@ body {
   position: absolute;
 }
 
-#intro {
+#intro, #night1 {
   display: none;
+}
+
+#mainBtns {
+  bottom: 10px; 
+  left: 10px;
+  position: absolute;
+}
+
+#objMark {
+  top: 10px; 
+  left: 10px;
 }

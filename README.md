@@ -11,5 +11,6 @@
   <summary>Sound Effects</summary>
   <ul>
     <li>"Thunderclap" sound effect recorded by Mike Koenig under Attribution 3.0.</li>
+    <li>"Electricity" sound effect recorded by Mike Koenig under Attribution 3.0.</li>
   </ul>
 </details>

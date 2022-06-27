@@ -112,8 +112,17 @@ function startIntro () {
                         setTimeout(function () {
                           $("#islide11").hide();
                           $("#islide12").show();
+
+                          setTimeout(function () {
+                            $("#intro").fadeOut(3000);
+                            fadeSound("track1");
+
+                            setTimeout(function () {
+                              theNoise();
+                            }, 3500);
+                          }, 4000);
                         }, 3000);
-                      }, 3000);
+                      }, 5000);
                     }, 3000);
                   }, 3000); 
                 }, 6000);
@@ -124,4 +133,23 @@ function startIntro () {
       }, 4000);
     }, 3000);
   }, 3100);
+}
+
+function theNoise () {
+  $("#night1").fadeIn(3000);
+
+  setTimeout(function () {
+    playSound("elec", 0);
+    display.style.backgroundColor = "green";
+    $("#night1").hide();
+
+    setTimeout(function () {
+      display.style.backgroundColor = "black";
+      $("#night1").show();
+
+      setTimeout(function () {
+        $(".gui").show();
+      }, 1000);
+    }, 50);
+  }, 3000);
 }
