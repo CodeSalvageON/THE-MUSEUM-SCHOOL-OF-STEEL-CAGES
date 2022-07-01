@@ -1,5 +1,15 @@
 body {
+  outline: none;
   background-color: black;
+}
+
+p {
+  margin: 0;
+  outline: none;
+}
+
+p:active, input[type="button"]:active {
+  outline: none;
 }
 
 .display {
@@ -29,7 +39,7 @@ body {
   cursor: pointer;
 }
 
-.intro-slide {
+.intro-slide, #sharonword {
   top: 200px;
   display: none;
   color: white;
@@ -70,6 +80,31 @@ body {
   display: none;
 }
 
+.talkHead {
+  display: none; 
+}
+
+.talkHead:hover {
+  cursor: pointer;
+}
+
+.talkBody {
+  display: flex;
+  width: 250px;
+  height: 70px; 
+  border: 1px solid black; 
+  border-radius: 5px;
+}
+
+.talkStuff {
+  overflow-y: auto;
+}
+
+.headImg {
+  border: 1px solid black; 
+  border-radius: 5px;
+}
+
 #display {
   top: 0px; 
   left: 0px; 
@@ -88,7 +123,7 @@ body {
   position: absolute;
 }
 
-#intro, #night1, #objDisplay, #invDisplay, #mapDisplay {
+#intro, #night1, #objDisplay, #invDisplay, #mapDisplay, #hallway1, #khanclass, #sharondreamtalk, #spiceroad, #dontpanic, #darkway, #office1, #office2 {
   display: none;
 }
 
@@ -130,5 +165,140 @@ body {
   font-size: 20px;
   border-radius: 8px;
   top: 100px; 
+  position: absolute;
+}
+
+#youAreAt {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+#talkInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #efcef8;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#sharondreamtalk {
+  font-family: monospace; 
+  color: white;
+}
+
+#compIcon {
+  display: none;
+  opacity: 0.6;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 300;
+  font-family: monospace; 
+  font-size: 24px;
+  padding: 5px;
+  background-color: #a4e382;
+}
+
+#compIcon:hover {
+  cursor: pointer;
+}
+
+#compInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #40f76e;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#combatInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #f29326;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#deathInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #a34729;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#mortemInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #f25926;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#lootInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #dcd4ac;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#moveBtn {
+  z-index: 300;
+  margin-left: auto; 
+  margin-right: auto; 
+  top: 200px; 
+  left: 0px; 
+  right: 0px;
   position: absolute;
 }
