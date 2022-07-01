@@ -193,7 +193,7 @@ atkBtn.onclick = function () {
       if (weaponAtk > 2) {
         ammo -= 1;
 
-        if (weaponAtk === 3) {
+        if (weaponAtk === 4) {
           playSound("m9", 1);
         }
       }
@@ -231,6 +231,7 @@ ldesBtn.onclick = function () {
 
 moveBtn.onclick = function () {
   $("#moveBtn").hide();
+  lootStatus.innerText = "";
 
   if (distanceRun < 1) {
     if (postDungeon === "") {
@@ -296,6 +297,7 @@ moveBtn.onclick = function () {
                                       $("#darkway").fadeIn(3000);
                                       distanceRun = 7;
                                       postDungeon = "wendigo";
+                                      playSound("track5", 0);
 
                                       setTimeout(function () {
                                         $("#moveBtn").show();
@@ -317,6 +319,8 @@ moveBtn.onclick = function () {
         }, 3100);
       }, 3000);
     }
+
+    else if (postDungeon === "wendigo") {}
   }
 
   else {
