@@ -302,3 +302,14 @@ p:active, input[type="button"]:active {
   right: 0px;
   position: absolute;
 }
+
+#wendigo {
+  z-index: 300;
+  top: 80px;
+  position: absolute;
+  left: 0px; 
+  right: 0px;
+  margin-left: auto; 
+  margin-right: auto; 
+  display: none;
+}

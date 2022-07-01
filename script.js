@@ -288,10 +288,13 @@ moveBtn.onclick = function () {
 
                                 setTimeout(function () {
                                   eastside1t.innerText = "Please go and find out what it is. Your reward shall be grand.";
+                                  addObjective("30 ammo recieved.");
+                                  $("#objMark").show();
 
                                   setTimeout(function () {
                                     $("#talkInt").fadeOut(3000);
                                     $("#office2").fadeOut(3000);
+                                    $("#objMark").fadeOut(3000);
 
                                     setTimeout(function () {
                                       $("#darkway").fadeIn(3000);
@@ -320,7 +323,23 @@ moveBtn.onclick = function () {
       }, 3000);
     }
 
-    else if (postDungeon === "wendigo") {}
+    else if (postDungeon === "wendigo") {
+      stopSound("track5");
+
+      setTimeout(function () {
+        $("#wendigo").show();
+        currentEnemy.innerText = "Current Enemy: Unknown";
+        enemyWp = 50;
+        enemyType = "wendigo";
+
+        setTimeout(function () {
+          isCombat = true; 
+          $("#combatInt").show(); 
+          $("#wendigo").hide(); 
+          leaveTarget = 2;
+        }, 1000);
+      }, 1000);
+    }
   }
 
   else {
@@ -709,6 +728,10 @@ setInterval(function () {
 
       else if (enemyType === "robot") {
         wp -= 6;
+      }
+
+      else if (enemyType === "wendigo") {
+        wp -= 7;
       }
     }
 
