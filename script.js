@@ -967,6 +967,7 @@ const talkTitle = document.getElementById("talkTitle");
 const sharon1t = document.getElementById("sharon1t");
 const mark1t = document.getElementById("mark1t");
 const eastside1t = document.getElementById("eastside1t");
+const myron1t = document.getElementById("myron1t");
 
 function guardSpeak (which) {
   if (isNew === true) {
