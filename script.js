@@ -786,6 +786,16 @@ function callCombatEvent (num) {
         }, 3100);
       }, 5000);
       break;
+    case 2:
+      addObjective("The tunnel opens up into a strange room.");
+      setTimeout(function () {
+        $("#darkway").fadeOut(3000);
+
+        setTimeout(function () {
+          
+        }, 3000);
+      }, 4500);
+      break;
   }
 }
 
