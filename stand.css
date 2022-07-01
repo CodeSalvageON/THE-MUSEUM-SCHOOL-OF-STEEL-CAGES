@@ -1,0 +1,58 @@
+body {
+  background-color: #dde8e7;
+}
+
+#ground {
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+}
+
+#clouds {
+  position: absolute;
+}
+
+#clouds1 {
+  position: absolute;
+}
+
+#bird {
+  position: absolute;
+}
+
+#fishbowl {
+  overflow: hidden;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  background-color: #dde8e7;
+  background-image: url("audi.jpg");
+  background-size: cover;
+  transition: ease-in-out 5s background-color;
+}
+
+#window {
+  margin: auto;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  border: 0.5px solid white;
+}
+
+#village {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+#fireflies {
+  left: 200px;
+  bottom: 100px;
+  display: none;
+  position: absolute;
+}
