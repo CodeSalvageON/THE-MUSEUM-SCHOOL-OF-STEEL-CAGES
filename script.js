@@ -34,6 +34,7 @@ const invBtn = document.getElementById("invBtn");
 const backInv = document.getElementById("backInv");
 const mapBtn = document.getElementById("mapBtn");
 const backMap = document.getElementById("backMap");
+const levBtn = document.getElementById("levBtn");
 
 const compIcon = document.getElementById("compIcon");
 const atkBtn = document.getElementById("atkBtn");
@@ -479,6 +480,10 @@ chooseCC.onclick = function () {
   ending = "cc";
   $("#specChooseInt").hide();
   endingSlides();
+}
+
+levBtn.onclick = function () {
+  window.open("https://github.com/CodeSalvageON/THE-MUSEUM-SCHOOL-OF-STEEL-CAGES/blob/main/README.md#guide");
 }
 
 function endingSlides () {
