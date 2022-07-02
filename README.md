@@ -18,5 +18,6 @@
     <li>"Electricity" sound effect recorded by Mike Koenig under Attribution 3.0.</li>
     <li>"Beep Ping" sound effect recorded by Mike Koenig under Attribution 3.0.</li>
     <li>"Beretta M9" sound effect recorded by Dion Stapper under Public Domain.</li>
+    <li>"Power Failure" sound effect recorded by Mike Koenig under Attribution 3.0.</li>
   </ul>
 </details>

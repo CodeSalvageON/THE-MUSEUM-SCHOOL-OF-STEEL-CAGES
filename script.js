@@ -179,6 +179,8 @@ compIcon.onclick = function () {
         }, 800);
       }, 4000);
       break;
+    case 1:
+      break
   }
 }
 
@@ -343,6 +345,11 @@ moveBtn.onclick = function () {
           leaveTarget = 2;
         }, 1000);
       }, 1000);
+    }
+
+    else if (postDungeon === "poweron") {
+      fadeSound("track6");
+      $("#compIcon").show();
     }
   }
 
@@ -662,11 +669,69 @@ function anotherEscape () {
     display.style.backgroundColor = "black";
 
     $("#eastside1").hide();
-    $("#myron").show(); 
+    $("#clark1").hide();
+    $("#myron1").show(); 
+    talkTitle.innerText = "Myron";
 
     setTimeout(function () {
       $("#talkInt").show();
       myron1t.innerText = "Check it out- there's nothing in the room.";
+
+      setTimeout(function () {
+        myron1t.innerText = "Hm. Some of this tech could be used for...manufacturing...";
+
+        setTimeout(function () {
+          myron1t.innerText = "Now scram, before things get ugly.";
+
+          setTimeout(function () {
+            $("#blkbrd").fadeOut(3000);
+            $("#talkInt").fadeOut(3000);
+
+            talkTitle.innerText = "Sharon";
+            $("#myron1").hide();
+            $("#sharon1").show();
+            sharon1t.style.color = "black";
+            sharon1t.innerText = "Welcome back to the Fortress.";
+
+            setTimeout(function () {
+              $("#fort2").fadeIn(3000);
+              $("#talkInt").fadeIn(3000);
+
+              setTimeout(function () {
+                sharon1t.innerText = "We- the entire Residents' Alliance- we're going to count on you soon.";
+
+                setTimeout(function () {
+                  sharon1t.innerText = "All we ask is that you keep the interests of your fellow students in mind.";
+
+                  setTimeout(function () {
+                    sharon1t.innerText = "Have some food before you go.";
+                    $("#objMark").show();
+                    addObjective("Recieved 20 food.");
+                    food += 20;
+
+                    setTimeout(function () {
+                      playSound("power", 0); 
+                      $("#objMark").hide();
+                      $("#fort2").hide();
+                      $("#talkInt").hide(); 
+
+                      setTimeout(function () {
+                        playSound("track6", 0);
+                        distanceRun = 20;
+                        postDungeon = "poweron";
+                        $("#darkway").show();
+                        $("#moveBtn").show();
+                        compIconClickEvent = 1;
+                        leaveTarget = 0;
+                      }, 2000);
+                    }, 4000);
+                  }, 5500);
+                }, 5000);
+              }, 6000);
+            }, 3100);
+          }, 4000);
+        }, 5000);
+      }, 4000);
     }, 1000);
   }, 50);
 }
@@ -828,6 +893,8 @@ function callCombatEvent (num) {
 
         setTimeout(function () {
           $("#den").fadeIn(3000);
+          $("#eastside1").hide();
+          talkTitle.innerText = "Myron";
 
           setTimeout(function () {
             $("#talkInt").show();
@@ -876,8 +943,11 @@ function callCombatEvent (num) {
                                   $("#clark1").show(); 
 
                                   setTimeout(function () {
-                                    $("#clark1").hide();
                                     clark1t.innerText = "They deserve to know the truth.";
+                                  }, 1500);
+
+                                  setTimeout(function () {
+                                    $("#clark1").hide();
                                     talkTitle.innerText = "Ms. Eastside";
                                     eastside1t.innerText = "That's enough Joe!";
                                     $("#eastside1").show();
@@ -886,6 +956,7 @@ function callCombatEvent (num) {
                                       $("#eastside1").hide();
                                       talkTitle.innerText = "Mr. Clark";
                                       $("#clark1").show(); 
+                                      clark1t.innerText = "No, it is not.";
 
                                       setTimeout(function () {
                                         $("clark1").hide(); 
@@ -902,6 +973,7 @@ function callCombatEvent (num) {
 
                                           setTimeout(function () {
                                             $("#talkInt").hide();
+                                            $("#eastside1").hide();
                                             $("#specShootInt").show();
                                           }, 3000);
                                         }, 3000);
@@ -922,6 +994,8 @@ function callCombatEvent (num) {
           }, 1000);
         }, 3000);
       }, 4500);
+      break;
+    case 3:
       break;
   }
 }
