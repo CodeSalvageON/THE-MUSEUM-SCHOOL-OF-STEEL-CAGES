@@ -482,7 +482,7 @@ chooseCC.onclick = function () {
 }
 
 function endingSlides () {
-  playSound("track7");
+  playSound("track7", 0);
   function displayEnd () {
     wah.innerText = "And so the Academy found a new direction, a new order.";
 
