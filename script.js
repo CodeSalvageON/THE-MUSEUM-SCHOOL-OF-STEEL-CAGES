@@ -189,6 +189,7 @@ compIcon.onclick = function () {
       $("#darkway").hide();
       $("#compIcon").hide();
       $("#alltheotherstuff").show(); 
+      $("#wah").show();
       wah.innerText = "In the dark, you rediscovered an old friend, a friend of many others too.";
 
       setTimeout(function () {
