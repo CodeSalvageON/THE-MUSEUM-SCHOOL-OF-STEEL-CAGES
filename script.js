@@ -56,6 +56,9 @@ const desStatus = document.getElementById("desStatus");
 const desBtn = document.getElementById("desBtn");
 const ldesBtn = document.getElementById("ldesBtn");
 
+const shootClark = document.getElementById("shootClark");
+const shootEastside = document.getElementById("shootEastside");
+
 let hasEaten = false;
 let hasLooted = false;
 let leaveTarget = 1;
@@ -289,6 +292,7 @@ moveBtn.onclick = function () {
                                 setTimeout(function () {
                                   eastside1t.innerText = "Please go and find out what it is. Your reward shall be grand.";
                                   addObjective("30 ammo recieved.");
+                                  ammo += 30;
                                   $("#objMark").show();
 
                                   setTimeout(function () {
@@ -417,6 +421,16 @@ llotBtn.onclick = function () {
   callCombatEvent(leaveTarget);
   $("#mortemInt").hide();
   isCombat = false;
+}
+
+shootClark.onclick = function () {
+  officeLeadership = "eastside";
+  anotherEscape();
+}
+
+shootEastside.onclick = function () {
+  officeLeadership = "clark";
+  anotherEscape();
 }
 
 // Animations 
@@ -637,6 +651,10 @@ function weirdHum () {
   }, 50);
 }
 
+function anotherEscape () {
+  
+}
+
 // Game variables. 
 
 let formerShow = "";
@@ -652,6 +670,7 @@ let enemyWp = 15;
 let weaponAtk = 3;
 let enemyType = "mob";
 let wp = 30;
+let officeLeadership = "eastside";
 
 function checkDeath () {
   if (wp < 1) {
@@ -828,8 +847,53 @@ function callCombatEvent (num) {
                               $("#blkbrd").fadeIn(3000);
 
                               $("#myron1").hide();
-                              $("#eastside").show();
+                              $("#eastside1").show();
+                              talkTitle.innerText = "Ms. Eastside";
                               eastside1t.innerText = "Don't you dare go in there.";
+
+                              setTimeout(function () {
+                                eastside1t.innerText = "If you do, Mr. Khan's machines might kill you.";
+
+                                setTimeout(function () {
+                                  talkTitle.innerText = "Mr. Clark";
+                                  $("#eastside1").hide();
+                                  $("#clark1").show(); 
+
+                                  setTimeout(function () {
+                                    $("#clark1").hide();
+                                    clark1t.innerText = "They deserve to know the truth.";
+                                    talkTitle.innerText = "Ms. Eastside";
+                                    eastside1t.innerText = "That's enough Joe!";
+                                    $("#eastside1").show();
+
+                                    setTimeout(function () {
+                                      $("#eastside1").hide();
+                                      talkTitle.innerText = "Mr. Clark";
+                                      $("#clark1").show(); 
+
+                                      setTimeout(function () {
+                                        $("clark1").hide(); 
+                                        $("#eastside1").show(); 
+                                        eastside1t.innerText = "YOU have a gun, don't you?";
+                                        talkTitle.innerText = "Ms. Eastside";
+                                        $("#objMark").show();
+                                        addObjective("Recieved 2 ammo.");
+                                        ammo += 2;
+
+                                        setTimeout(function () {
+                                          $("#objMark").hide();
+                                          eastside1t.innerText = "Well then, shoot him!";
+
+                                          setTimeout(function () {
+                                            $("#talkInt").hide();
+                                            $("#specShootInt").show();
+                                          }, 3000);
+                                        }, 3000);
+                                      }, 3000);
+                                    }, 2000);
+                                  }, 3000);
+                                }, 4000);
+                              }, 3000);
                             }, 3100);
                           }, 6000);
                         }, 5500);
@@ -1015,6 +1079,7 @@ const sharon1t = document.getElementById("sharon1t");
 const mark1t = document.getElementById("mark1t");
 const eastside1t = document.getElementById("eastside1t");
 const myron1t = document.getElementById("myron1t");
+const clark1t = document.getElementById("clark1t");
 
 function guardSpeak (which) {
   if (isNew === true) {

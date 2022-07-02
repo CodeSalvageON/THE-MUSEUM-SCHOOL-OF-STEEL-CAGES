@@ -293,6 +293,22 @@ p:active, input[type="button"]:active {
   overflow-y: auto;
 }
 
+#specShootInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #aa7964;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
 #moveBtn {
   z-index: 300;
   margin-left: auto; 
