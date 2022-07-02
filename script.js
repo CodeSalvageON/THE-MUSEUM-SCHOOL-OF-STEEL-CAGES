@@ -478,6 +478,27 @@ chooseCC.onclick = function () {
 }
 
 function endingSlides () {
+  playSound("track7");
+  function displayEnd () {
+    wah.innerText = "And so the Academy found a new direction, a new order.";
+
+    setTimeout(function () {
+      wah.innerText = "And one way or another, the caged windows, they were gone.";
+
+      setTimeout(function () {
+        wah.innerText = "Why not enjoy a trip to the student lounge?";
+
+        setTimeout(function () {
+          $("#alltheotherstuff").fadeOut(3000);
+
+          setTimeout(function () {
+            $("#slounge").fadeIn(3000);
+          }, 3100);
+        }, 3000);
+      }, 4000);
+    }, 4000);
+  }
+  
   if (ending === "ra") {
     wah.innerText = "With no real threats to their expansion, the Residents’ Alliance quickly moved to control all operations within the school.";
     $("#alltheotherstuff").show();
@@ -490,7 +511,11 @@ function endingSlides () {
         wah.innerText = "Unfortunately, much of the building remained vandalized and drugs, albeit less, flowed through the worst parts of the Academy. Some residents left entirely as a result.";
 
         setTimeout(function () {
-          wah.innerText = "For your actions, the Academy allowed you to keep the old Head Office room, a palace of your own.";
+          wah.innerText = "For your actions, the Alliance allowed you to keep the old Head Office room, a palace of your own.";
+
+          setTimeout(function () {
+            displayEnd();
+          }, 5500);
         }, 11000);
       }, 11000);
     }, 7500);
@@ -510,6 +535,10 @@ function endingSlides () {
 
           setTimeout(function () {
             wah.innerText = "For your actions, you were awarded a hefty amount of space within the Academy.";
+
+            setTimeout(function () {
+              displayEnd();
+            }, 4500);
           }, 8000);
         }, 8000);
       }, 11300);
@@ -528,6 +557,10 @@ function endingSlides () {
 
           setTimeout(function () {
             wah.innerText = "For your actions, Mr. Khan personally invited you to his work room, where he allowed you to take a small piece of the advanced technology housed there.";
+
+            setTimeout(function () {
+              displayEnd();
+            }, 8000);
           }, 11500);
         }, 11000);
       }, 8000);
@@ -547,6 +580,10 @@ function endingSlides () {
 
           setTimeout(function () {
             wah.innerText = "For your actions, Myron gave you a lifetime supply of drugs for you to use- or to sell.";
+
+            setTimeout(function () {
+              displayEnd();
+            }, 6000);
           }, 9000);
         }, 10000);
       }, 9000);

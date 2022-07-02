@@ -123,7 +123,7 @@ p:active, input[type="button"]:active {
   position: absolute;
 }
 
-#intro, #night1, #objDisplay, #invDisplay, #mapDisplay, #hallway1, #khanclass, #sharondreamtalk, #spiceroad, #dontpanic, #darkway, #office1, #office2, #den, #blkbrd, #fort2, #alltheotherstuff {
+#intro, #night1, #objDisplay, #invDisplay, #mapDisplay, #hallway1, #khanclass, #sharondreamtalk, #spiceroad, #dontpanic, #darkway, #office1, #office2, #den, #blkbrd, #fort2, #alltheotherstuff, #slounge {
   display: none;
 }
 
