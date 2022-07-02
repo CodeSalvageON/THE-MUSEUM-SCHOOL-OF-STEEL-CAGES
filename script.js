@@ -466,16 +466,19 @@ shootEastside.onclick = function () {
 chooseRA.onclick = function () {
   ending = "ra";
   $("#specChooseInt").hide();
+  endingSlides();
 }
 
 chooseHO.onclick = function () {
   ending = "ho";
   $("#specChooseInt").hide();
+  endingSlides();
 }
 
 chooseCC.onclick = function () {
   ending = "cc";
-  $("#specChooseInt").show();
+  $("#specChooseInt").hide();
+  endingSlides();
 }
 
 function endingSlides () {
