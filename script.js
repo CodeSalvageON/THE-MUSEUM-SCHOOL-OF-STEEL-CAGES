@@ -59,11 +59,17 @@ const ldesBtn = document.getElementById("ldesBtn");
 const shootClark = document.getElementById("shootClark");
 const shootEastside = document.getElementById("shootEastside");
 
+const chooseRA = document.getElementById("chooseRA");
+const chooseHO = document.getElementById("chooseHO");
+const chooseCC = document.getElementById("chooseCC");
+const wah = document.getElementById("wah");
+
 let hasEaten = false;
 let hasLooted = false;
 let leaveTarget = 1;
 let distanceRun = 10;
 let postDungeon = "";
+let ending = "";
 
 let compIconClickEvent = 0;
 
@@ -180,6 +186,22 @@ compIcon.onclick = function () {
       }, 4000);
       break;
     case 1:
+      $("#darkway").hide();
+      $("#compIcon").hide();
+      $("#alltheotherstuff").show(); 
+      wah.innerText = "In the dark, you rediscovered an old friend, a friend of many others too.";
+
+      setTimeout(function () {
+        wah.innerText = "The old order of the Academy did indeed still exist.";
+
+        setTimeout(function () {
+          wah.innerText = "The question becomes, who shall inherit it?";
+
+          setTimeout(function () {
+            $("#specChooseInt").show();
+          }, 4000);
+        }, 4000);
+      }, 5500);
       break
   }
 }
@@ -438,6 +460,97 @@ shootClark.onclick = function () {
 shootEastside.onclick = function () {
   officeLeadership = "clark";
   anotherEscape();
+}
+
+chooseRA.onclick = function () {
+  ending = "ra";
+  $("#specChooseInt").hide();
+}
+
+chooseHO.onclick = function () {
+  ending = "ho";
+  $("#specChooseInt").hide();
+}
+
+chooseCC.onclick = function () {
+  ending = "cc";
+  $("#specChooseInt").show();
+}
+
+function endingSlides () {
+  if (ending === "ra") {
+    wah.innerText = "With no real threats to their expansion, the Residents’ Alliance quickly moved to control all operations within the school.";
+    $("#alltheotherstuff").show();
+    $("#wah").show();
+
+    setTimeout(function () {
+      wah.innerText = "Delivering on their promise of better living conditions, the Alliance used their new numbers and Mr. Khan’s old technology in order to give the old Academy an upgrade.";
+
+      setTimeout(function () {
+        wah.innerText = "Unfortunately, much of the building remained vandalized and drugs, albeit less, flowed through the worst parts of the Academy. Some residents left entirely as a result.";
+
+        setTimeout(function () {
+          wah.innerText = "For your actions, the Academy allowed you to keep the old Head Office room, a palace of your own.";
+        }, 11000);
+      }, 11000);
+    }, 7500);
+  }
+
+  else if (ending === "ho") {
+    if (officeLeadership === "clark") {
+      wah.innerText = "With no functioning Mr. Khan unit, the Head Office, with your help, finally came to realize that it was pointless to rely on a machine and a man that had forgotten about them.";
+      $("#alltheotherstuff").show();
+      $("#wah").show();
+
+      setTimeout(function () {
+        wah.innerText = "Soon, the Office utilized the surviving technology from the disabled unit, using it to improve the Academy as a whole.";
+
+        setTimeout(function () {
+          wah.innerText = "The graffiti on the walls was cleaned up, and even the food for both the students and the staff were improved.";
+
+          setTimeout(function () {
+            wah.innerText = "For your actions, you were awarded a hefty amount of space within the Academy.";
+          }, 8000);
+        }, 8000);
+      }, 11300);
+    }
+
+    else {
+      wah.innerText = "With Mr. Khan back, the Academy returned to its original state- orderly and self-sufficient, with the Head Office following suit.";
+      $("#alltheotherstuff").show();
+      $("#wah").show();
+
+      setTimeout(function () {
+        wah.innerText = "The Head Office used the newly repaired Mr. Khan unit in order to reinstate many forgotten rules, some of which restricted the freedoms of the students and staff even further.";
+
+        setTimeout(function () {
+          wah.innerText = "Although much of the Academy was cleaned up and living conditions drastically improved, the relationship between Mr. Khan and the residents of the Academy remained cold and distant.";
+
+          setTimeout(function () {
+            wah.innerText = "For your actions, Mr. Khan personally invited you to his work room, where he allowed you to take a small piece of the advanced technology housed there.";
+          }, 11500);
+        }, 11000);
+      }, 8000);
+    }
+  }
+
+  else if (ending === "cc") {
+    wah.innerText = "With the Candy Crew in charge of Academy operations, their dreams of a drug empire soon became realized. Drugs soon became the new currency.";
+    $("#alltheotherstuff").show();
+    $("#wah").show();
+
+      setTimeout(function () {
+        wah.innerText = "Sifting through the deserted City surrounding them, the Candy Crew found many tools that would aid them in their drug manufacturing operations.";
+
+        setTimeout(function () {
+          wah.innerText = "It became common to see drug junkies roaming not only the halls of the tarnished Academy, but the streets of the deserted City as well.";
+
+          setTimeout(function () {
+            wah.innerText = "For your actions, Myron gave you a lifetime supply of drugs for you to use- or to sell.";
+          }, 9000);
+        }, 10000);
+      }, 9000);
+  }
 }
 
 // Animations 

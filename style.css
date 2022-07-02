@@ -123,7 +123,7 @@ p:active, input[type="button"]:active {
   position: absolute;
 }
 
-#intro, #night1, #objDisplay, #invDisplay, #mapDisplay, #hallway1, #khanclass, #sharondreamtalk, #spiceroad, #dontpanic, #darkway, #office1, #office2, #den, #blkbrd, #fort2 {
+#intro, #night1, #objDisplay, #invDisplay, #mapDisplay, #hallway1, #khanclass, #sharondreamtalk, #spiceroad, #dontpanic, #darkway, #office1, #office2, #den, #blkbrd, #fort2, #alltheotherstuff {
   display: none;
 }
 
@@ -301,6 +301,22 @@ p:active, input[type="button"]:active {
   font-size: 15px;
   opacity: 0.6;
   background-color: #aa7964;
+  border-radius: 5px; 
+  top: 120px; 
+  left: 150px;
+  position: absolute;
+  z-index: 300;
+  overflow-y: auto;
+}
+
+#specChooseInt {
+  width: 300px;
+  height: 250px;
+  display: none;
+  font-family: monospace;
+  font-size: 15px;
+  opacity: 0.6;
+  background-color: #bcd87d;
   border-radius: 5px; 
   top: 120px; 
   left: 150px;
