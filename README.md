@@ -30,3 +30,8 @@ This game is basically an adventure-dungeon-crawler, so...
     <li>"Power Failure" sound effect recorded by Mike Koenig under Attribution 3.0.</li>
   </ul>
 </details>
+
+## Inspiration
+* Lean On Me (1989)
+* Stand And Deliver (1988)
+* Matilda (1996)
