@@ -792,7 +792,54 @@ function callCombatEvent (num) {
         $("#darkway").fadeOut(3000);
 
         setTimeout(function () {
-          
+          $("#den").fadeIn(3000);
+
+          setTimeout(function () {
+            $("#talkInt").show();
+            $("#eastside1").hide();
+            $("#myron1").show();
+
+            setTimeout(function () {
+              myron1t.innerText = "I'm Myron, the leader of 'Candy Crew'.";
+
+              setTimeout(function () {
+                myron1t.innerText = "We have a somewhat bad reputation for selling drugs and whatnot.";
+
+                setTimeout(function () {
+                  myron1t.innerText = "Now, we do this for a reason. My- our- goals, they require...funds.";
+
+                  setTimeout(function () {
+                    myron1t.innerText = "This place is falling apart. Even you can probably see that.";
+
+                    setTimeout(function () {
+                      myron1t.innerText = "Thus, we need to get out. I've seen the outside world.";
+
+                      setTimeout(function () {
+                        myron1t.innerText = "It's quite beautiful compared to the confines of this building.";
+
+                        setTimeout(function () {
+                          myron1t.innerText = "With the right technology, we can unseal Mr. Khan's doors, and enter a new world.";
+
+                          setTimeout(function () {
+                            myron1t.innerText = "We may have also found a way to Mr. Khan's room as well.";
+                            $("#den").fadeOut(3000);
+
+                            setTimeout(function () {
+                              $("#blkbrd").fadeIn(3000);
+
+                              $("#myron1").hide();
+                              $("#eastside").show();
+                              eastside1t.innerText = "Don't you dare go in there.";
+                            }, 3100);
+                          }, 6000);
+                        }, 5500);
+                      }, 4000);
+                    }, 4500);
+                  }, 5500);
+                }, 4500);
+              }, 3000);
+            }, 2000);
+          }, 1000);
         }, 3000);
       }, 4500);
       break;
