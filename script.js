@@ -652,7 +652,23 @@ function weirdHum () {
 }
 
 function anotherEscape () {
-  
+  $("#blkbrd").hide();
+  $("#specShootInt").hide();
+  display.style.backgroundColor = "red";
+  playSound("m9", 1);
+
+  setTimeout(function () {
+    $("#blkbrd").show();
+    display.style.backgroundColor = "black";
+
+    $("#eastside1").hide();
+    $("#myron").show(); 
+
+    setTimeout(function () {
+      $("#talkInt").show();
+      myron1t.innerText = "Check it out- there's nothing in the room.";
+    }, 1000);
+  }, 50);
 }
 
 // Game variables. 
