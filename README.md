@@ -1,5 +1,12 @@
 # The Museum: School of Steel Cages
 
+## Guide 
+This game is basically an adventure-dungeon-crawler, so...
+* In the beginning of the game, you use the "[ MAP ]" to move around.
+* During dungeon crawler sequences, eat food to regain health.
+* Looting is key.
+* Be patient with the game. Some sequences might take a long time, but they'll eventually get to the point.
+
 ## Credits
 <details>
   <summary>Soundtrack</summary>
